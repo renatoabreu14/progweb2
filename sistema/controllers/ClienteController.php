@@ -23,4 +23,54 @@ class ClienteController
         return "OK";
     }
 
+    public static function trazerTodos(){
+        $sql = "SELECT * FROM cliente ORDER BY nome";
+        $db = Conexao::getInstance();
+        $stmt = $db->query($sql);
+        $listagem = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+        $arrRetorno = array();
+        foreach ($listagem as $itemLista){
+            $arrRetorno[] = self::popularCliente($itemLista);
+        }
+        return $arrRetorno;
+    }
+
+    public static function buscarCliente($id){
+        $sql = "SELECT * FROM cliente WHERE id = :id";
+        $db = Conexao::getInstance();
+
+        $stmt = $db->prepare($sql);
+        $stmt->bindValue(':id', $id);
+        $stmt->execute();
+
+        $listagem = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+        $arrRetorno = array();
+
+        if (count($listagem) > 0){
+            return self::popularCliente($listagem[0]);
+        }
+    }
+
+    private static function popularCliente($itemLista){
+        $cliente = new Cliente();
+        $cliente->setId($itemLista['id']);
+        $cliente->setNome($itemLista['nome']);
+        $cliente->setCpf($itemLista['cpf']);
+        $cliente->setEndereco($itemLista['endereco']);
+        $cliente->setTelefone($itemLista['telefone']);
+        $cliente->setEmail($itemLista['email']);
+        $cliente->setSenha($itemLista['senha']);
+        return $cliente;
+    }
+
+    public static function excluir($id){
+        $sql = "DELETE FROM cliente WHERE id = :id";
+        $db = Conexao::getInstance();
+        $stmt = $db->prepare($sql);
+        $stmt->bindValue(':id', $id);
+        $stmt->execute();
+    }
+
 }
