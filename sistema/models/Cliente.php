@@ -12,7 +12,7 @@ class Cliente{
     private $telefone;
 
     public function __construct(){
-
+        $this->setId(0);
     }
 
     /**

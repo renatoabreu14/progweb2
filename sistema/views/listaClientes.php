@@ -51,7 +51,7 @@ if (isset($_GET['excluir'])){
                         echo "<td>";
                         echo "<a href='verCliente.php?id=".$cliente->getId()."' class='btn btn-info'>Visualizar</a>";
                         echo " ";
-                        echo "<a href='' class='btn btn-primary'>Editar</a>";
+                        echo "<a href='cadCliente.php?id=".$cliente->getId()."' class='btn btn-primary'>Editar</a>";
                         echo " ";
                         echo "<a href='listaClientes.php?excluir=".$cliente->getId().
                             "' class='btn btn-danger'>Remover</a>";

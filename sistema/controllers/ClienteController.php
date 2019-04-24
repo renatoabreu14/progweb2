@@ -5,7 +5,32 @@ require_once "Conexao.php";
 class ClienteController
 {
 
-    public static function inserir(Cliente $cliente){
+    public static function salvar(Cliente $cliente){
+        if ($cliente->getId() > 0){
+            return self::alterar($cliente);
+        }else{
+            return self::inserir($cliente);
+        }
+    }
+
+    private static function alterar(Cliente $cliente){
+        $sql = "UPDATE cliente SET nome = :nome, cpf=:cpf, 
+                endereco=:endereco, telefone=:telefone WHERE id=:id";
+
+        $db = Conexao::getInstance();
+        $stmt = $db->prepare($sql);
+        $stmt->bindValue(':nome', $cliente->getNome());
+        $stmt->bindValue(':cpf', $cliente->getCpf());
+        $stmt->bindValue(':endereco', $cliente->getEndereco());
+        $stmt->bindValue(':telefone', $cliente->getTelefone());
+        $stmt->bindValue(':id', $cliente->getId());
+
+        $stmt->execute();
+
+        return "OK";
+    }
+
+    private static function inserir(Cliente $cliente){
         $sql = "INSERT INTO cliente (nome, cpf, endereco, email, senha, telefone) 
                 VALUES (:nome, :cpf, :endereco, :email, :senha, :telefone)";
 
@@ -45,8 +70,6 @@ class ClienteController
         $stmt->execute();
 
         $listagem = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-        $arrRetorno = array();
 
         if (count($listagem) > 0){
             return self::popularCliente($listagem[0]);
