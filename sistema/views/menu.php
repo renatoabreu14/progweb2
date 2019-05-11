@@ -23,6 +23,4 @@ genero
 editora
 valor
 ano
-
-
 -->
