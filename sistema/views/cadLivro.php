@@ -11,6 +11,21 @@ if (isset($_GET['id'])){
 }
 
 if(isset($_POST['salvar'])){
+
+    $foto = $_FILES["capa"];
+    // Pega extensão da imagem
+    preg_match("/\.(gif|bmp|png|jpg|jpeg){1}$/i", $foto["name"], $ext);
+
+    // Gera um nome único para a imagem
+    $nome_imagem = md5(uniqid(time())) . "." . $ext[1];
+
+    // Caminho de onde ficará a imagem
+    $caminho_imagem = "images/" . $nome_imagem;
+
+    // Faz o upload da imagem para seu respectivo caminho
+    move_uploaded_file($foto["tmp_name"], $caminho_imagem);
+
+
     $livro->setId($_POST['id']);
     $livro->setTitulo($_POST['titulo']);
     $livro->setDescricao($_POST['descricao']);
@@ -19,6 +34,7 @@ if(isset($_POST['salvar'])){
     $livro->setAno($_POST['ano']);
     $livro->setGenero(GeneroController::buscarGenero($_POST['genero']));
     $livro->setEditora(EditoraController::buscarEditora($_POST['editora']));
+    $livro->setCapaImagem($nome_imagem);
 
     LivroController::salvar($livro);
     header('Location:listaLivros.php');
@@ -56,7 +72,7 @@ if(isset($_POST['salvar'])){
                     <h3 class="text-center">Cadastro de livros</h3>
                 </div>
                 <div class="card-body">
-                    <form action="cadLivro.php" method="post">
+                    <form action="cadLivro.php" method="post" enctype="multipart/form-data">
                         <input type="hidden" name="id" value="<?php echo $livro->getId();?>">
                         <div class="form-row">
                             <div class="form-group col-md-8">
@@ -111,6 +127,10 @@ if(isset($_POST['salvar'])){
                                     }
                                     ?>
                                 </select>
+                            </div>
+                            <div class="form-group col-md-12">
+                                <label for="">Capa do livro</label>
+                                <input type="file" class="form-control" name="capa">
                             </div>
                             <button class="btn btn-primary" type="submit" name="salvar">Salvar</button>
                         </div><!--form-row-->

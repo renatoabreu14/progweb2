@@ -15,7 +15,7 @@ class LivroController{
     }
 
     private static function inserir(Livro $livro){
-        $sql = "INSERT INTO livro (titulo, descricao, autor, idgenero, ideditora, valor, ano) VALUES (:titulo, :descricao, :autor, :idgenero, :ideditora, :valor, :ano)";
+        $sql = "INSERT INTO livro (titulo, descricao, autor, idgenero, ideditora, valor, ano, capa) VALUES (:titulo, :descricao, :autor, :idgenero, :ideditora, :valor, :ano, :capa)";
 
         $db = Conexao::getInstance();
         $stmt = $db->prepare($sql);
@@ -26,6 +26,7 @@ class LivroController{
         $stmt->bindValue(':ideditora', $livro->getEditora()->getId());
         $stmt->bindValue(':valor', $livro->getValor());
         $stmt->bindValue(':ano', $livro->getAno());
+        $stmt->bindValue(':capa', $livro->getCapaImagem());
 
         $stmt->execute();
 
@@ -35,7 +36,7 @@ class LivroController{
     private static function alterar(Livro $livro){
         $sql = "UPDATE livro SET titulo=:titulo, descricao=:descricao, 
     autor=:autor, idgenero=:idgenero, ideditora=:ideditora, 
-    valor=:valor, ano=:ano WHERE id=:id";
+    valor=:valor, ano=:ano, capa=:capa WHERE id=:id";
 
         $db = Conexao::getInstance();
         $stmt = $db->prepare($sql);
@@ -46,6 +47,7 @@ class LivroController{
         $stmt->bindValue(':ideditora', $livro->getEditora()->getId());
         $stmt->bindValue(':valor', $livro->getValor());
         $stmt->bindValue(':ano', $livro->getAno());
+        $stmt->bindValue(':capa', $livro->getCapaImagem());
         $stmt->bindValue(':id', $livro->getId());
 
         $stmt->execute();
@@ -86,6 +88,8 @@ class LivroController{
         $livro->getGenero()->setNome($itemLista['genero']);
         $livro->getEditora()->setId($itemLista['ideditora']);
         $livro->getEditora()->setNome($itemLista['editora']);
+        $livro->setCapaImagem($itemLista['capa']);
+
         return $livro;
     }
 
