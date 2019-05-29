@@ -2,18 +2,128 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f6082895-7e42-4471-8ae3-91649a3b22ae" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/patinhos.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sistema/views/css/meuestilo.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sistema/views/js/meujs.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sistema/views/login.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistema/views/css/animate.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistema/views/css/flaticon.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistema/views/css/font-awesome.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistema/views/css/images/ui-bg_glass_75_d0e5f5_1x400.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistema/views/css/images/ui-bg_glass_85_dfeffc_1x400.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistema/views/css/images/ui-bg_glass_95_fef1ec_1x400.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistema/views/css/images/ui-bg_gloss-wave_55_5c9ccc_500x100.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistema/views/css/images/ui-bg_inset-hard_100_f5f8f9_1x100.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistema/views/css/images/ui-bg_inset-hard_100_fcfdfd_1x100.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistema/views/css/images/ui-icons_217bc0_256x240.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistema/views/css/images/ui-icons_2e83ff_256x240.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistema/views/css/images/ui-icons_469bdd_256x240.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistema/views/css/images/ui-icons_6da8d5_256x240.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistema/views/css/images/ui-icons_cd0a0a_256x240.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistema/views/css/images/ui-icons_d8e7f3_256x240.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistema/views/css/images/ui-icons_f9bd01_256x240.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistema/views/css/jquery-ui.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistema/views/css/meanmenu.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistema/views/css/owl.carousel.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistema/views/css/pe-icon-7-stroke.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistema/views/css/responsive.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistema/views/fonts/Flaticon.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistema/views/fonts/Flaticon.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistema/views/fonts/Flaticon.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistema/views/fonts/Flaticon.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistema/views/fonts/FontAwesome.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistema/views/fonts/fontawesome-webfont.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistema/views/fonts/fontawesome-webfont.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistema/views/fonts/fontawesome-webfont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistema/views/fonts/fontawesome-webfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistema/views/fonts/fontawesome-webfont.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistema/views/fonts/glyphicons-halflings-regular.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistema/views/fonts/glyphicons-halflings-regular.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistema/views/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistema/views/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistema/views/fonts/glyphicons-halflings-regular.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistema/views/img/404-page.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistema/views/img/about/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistema/views/img/about/2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistema/views/img/about/team/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistema/views/img/about/team/2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistema/views/img/about/team/3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistema/views/img/about/team/4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistema/views/img/banner/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistema/views/img/banner/2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistema/views/img/banner/3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistema/views/img/blog/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistema/views/img/blog/2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistema/views/img/blog/3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistema/views/img/blog/4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistema/views/img/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistema/views/img/featured/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistema/views/img/featured/2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistema/views/img/featured/3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistema/views/img/featured/4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistema/views/img/featured/5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistema/views/img/featured/6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistema/views/img/featured/7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistema/views/img/featured/8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistema/views/img/header-bg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistema/views/img/logo-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistema/views/img/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistema/views/img/map-icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistema/views/img/paypal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistema/views/img/quick-view.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistema/views/img/shop-info-bg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistema/views/img/shop/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistema/views/img/shop/2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistema/views/img/single-product/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistema/views/img/single-product/2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistema/views/img/single-product/3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistema/views/img/single-product/bg-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistema/views/img/single-product/bg-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistema/views/img/single-product/bg-3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistema/views/img/slider/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistema/views/img/slider/2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistema/views/img/testimonial/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistema/views/img/testimonial/2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistema/views/img/testimonial/bg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistema/views/img/wishlist/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistema/views/img/wishlist/2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistema/views/img/wishlist/3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistema/views/js/jquery-ui.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistema/views/js/jquery.countdown.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistema/views/js/jquery.counterup.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistema/views/js/jquery.meanmenu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistema/views/js/jquery.scrollUp.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistema/views/js/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistema/views/js/owl.carousel.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistema/views/js/plugins.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistema/views/js/vendor/jquery-1.12.0.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistema/views/js/vendor/modernizr-2.8.3.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistema/views/js/waypoints.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistema/views/js/wow.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistema/views/lib/css/nivo-slider.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistema/views/lib/css/preview.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistema/views/lib/home.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistema/views/lib/img/arrows-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistema/views/lib/img/arrows.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistema/views/lib/img/bullets-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistema/views/lib/img/bullets.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistema/views/lib/img/loading-2.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistema/views/lib/img/loading.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistema/views/lib/js/jquery.nivo.slider.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistema/views/shop.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistema/views/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistema/views/venobox/close.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistema/views/venobox/next.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistema/views/venobox/preload-circle.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistema/views/venobox/preload-dots.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistema/views/venobox/preload-ios.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistema/views/venobox/preload-quads.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistema/views/venobox/preload.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistema/views/venobox/prev.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistema/views/venobox/venobox.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistema/views/venobox/venobox.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistema/views/venobox/venobox.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sistema/controllers/ClienteController.php" beforeDir="false" afterPath="$PROJECT_DIR$/sistema/controllers/ClienteController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sistema/controllers/LivroController.php" beforeDir="false" afterPath="$PROJECT_DIR$/sistema/controllers/LivroController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sistema/models/Livro.php" beforeDir="false" afterPath="$PROJECT_DIR$/sistema/models/Livro.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sistema/views/cadLivro.php" beforeDir="false" afterPath="$PROJECT_DIR$/sistema/views/cadLivro.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sistema/views/menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/sistema/views/menu.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sistema/views/verLivro.php" beforeDir="false" afterPath="$PROJECT_DIR$/sistema/views/verLivro.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sistema/views/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/sistema/views/css/bootstrap.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sistema/views/js/bootstrap.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/sistema/views/js/bootstrap.min.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -31,8 +141,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sistema/views/menu.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="6" column="8" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
+            <state relative-caret-position="224">
+              <caret line="7" column="59" selection-start-line="7" selection-start-column="53" selection-end-line="7" selection-end-column="59" />
             </state>
           </provider>
         </entry>
@@ -40,26 +150,53 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sistema/views/listaLivros.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="32">
-              <caret line="1" column="50" selection-start-line="1" selection-start-column="50" selection-end-line="1" selection-end-column="50" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/sistema/views/login.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+            <state relative-caret-position="96">
+              <caret line="3" column="14" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sistema/controllers/ClienteController.php">
+        <entry file="file://$PROJECT_DIR$/sistema/views/cadGenero.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="628">
-              <caret line="91" column="30" selection-start-line="91" selection-start-column="12" selection-end-line="91" selection-end-column="30" />
+            <state relative-caret-position="320">
+              <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sistema/views/login.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="224">
+              <caret line="7" column="30" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sistema/views/shop.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="352">
+              <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/sistema/controllers/LivroController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="308">
+              <caret line="78" column="4" selection-start-line="78" selection-start-column="4" selection-end-line="78" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sistema/models/Genero.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="480">
+              <caret line="15" column="7" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -79,6 +216,8 @@
       <find>Editora</find>
       <find>editora</find>
       <find>$cliente</find>
+      <find>lista de</find>
+      <find>productM</find>
     </findStrings>
     <replaceStrings>
       <replace>enero</replace>
@@ -111,15 +250,16 @@
         <option value="$PROJECT_DIR$/sistema/views/listaEditoras.php" />
         <option value="$PROJECT_DIR$/sistema/models/Livro.php" />
         <option value="$PROJECT_DIR$/sistema/views/cadLivro.php" />
-        <option value="$PROJECT_DIR$/sistema/controllers/LivroController.php" />
         <option value="$PROJECT_DIR$/sistema/views/verLivro.php" />
         <option value="$PROJECT_DIR$/sistema/views/css/meuestilo.css" />
         <option value="$PROJECT_DIR$/sistema/views/js/meujs.js" />
-        <option value="$PROJECT_DIR$/sistema/controllers/ClienteController.php" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/sistema/views/login.php" />
         <option value="$PROJECT_DIR$/sistema/views/listaLivros.php" />
         <option value="$PROJECT_DIR$/sistema/views/menu.php" />
+        <option value="$PROJECT_DIR$/sistema/controllers/ClienteController.php" />
+        <option value="$PROJECT_DIR$/sistema/views/shop.php" />
+        <option value="$PROJECT_DIR$/sistema/controllers/LivroController.php" />
       </list>
     </option>
   </component>
@@ -162,6 +302,13 @@
               <item name="sistema" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="public_html" type="b2602c69:ProjectViewProjectNode" />
+              <item name="public_html" type="462c0819:PsiDirectoryNode" />
+              <item name="sistema" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -171,7 +318,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/sistema/views" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -180,12 +327,15 @@
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/sistema/views" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/sistema/views" />
+      <recent name="$PROJECT_DIR$/sistema/views/js" />
+      <recent name="$PROJECT_DIR$/sistema/views/css" />
       <recent name="$PROJECT_DIR$/sistema/js" />
       <recent name="$PROJECT_DIR$/sistema" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/sistema/views" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -224,6 +374,8 @@
       <workItem from="1557887191759" duration="1882000" />
       <workItem from="1558142447758" duration="1695000" />
       <workItem from="1558199167659" duration="8752000" />
+      <workItem from="1558210518011" duration="69000" />
+      <workItem from="1559082446427" duration="5887000" />
     </task>
     <task id="LOCAL-00001" summary="Música infantis">
       <created>1553044411879</created>
@@ -281,17 +433,25 @@
       <option name="project" value="LOCAL" />
       <updated>1557604694535</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Aula do dia 18/05/2019&#10;Sistema de login com sessão">
+      <created>1558210559491</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1558210559491</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="80929000" />
+    <option name="totallyTimeSpent" value="86885000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.19743447" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.20356944" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="0" />
       <window_info anchor="bottom" id="Database Changes" order="1" />
@@ -344,7 +504,8 @@
     <MESSAGE value="Aula do dia 23/04/2019&#10;Lista de Clientes cadastrados&#10;Alteração dos dados do Cliente" />
     <MESSAGE value="Aula do dia 30/04/2019&#10;Cadastro de Genero e Editora completo" />
     <MESSAGE value="Aula do dia 07/05/2019 e 11/05/2019&#10;Cadastro de livro com composição de genero e editora" />
-    <option name="LAST_COMMIT_MESSAGE" value="Aula do dia 07/05/2019 e 11/05/2019&#10;Cadastro de livro com composição de genero e editora" />
+    <MESSAGE value="Aula do dia 18/05/2019&#10;Sistema de login com sessão" />
+    <option name="LAST_COMMIT_MESSAGE" value="Aula do dia 18/05/2019&#10;Sistema de login com sessão" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/sistema/views/js/bootstrap.bundle.js">
@@ -398,13 +559,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sistema/views/cadGenero.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="56" column="34" selection-start-line="56" selection-start-column="34" selection-end-line="56" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sistema/views/cadEditora.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="130">
@@ -430,13 +584,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3392">
           <caret line="106" column="10" selection-end-line="112" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sistema/models/Genero.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="15" column="7" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
         </state>
       </provider>
     </entry>
@@ -468,13 +615,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sistema/controllers/LivroController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="640">
-          <caret line="96" column="26" selection-start-line="96" selection-start-column="23" selection-end-line="96" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sistema/views/verLivro.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="224">
@@ -496,27 +636,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sistema/views/css/meuestilo.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3168">
-          <caret line="99" column="1" selection-start-line="99" selection-start-column="1" selection-end-line="99" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sistema/views/js/meujs.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="2" column="3" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sistema/views/listaLivros.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="32">
-          <caret line="1" column="50" selection-start-line="1" selection-start-column="50" selection-end-line="1" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="64">
@@ -524,24 +643,81 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sistema/controllers/ClienteController.php">
+    <entry file="file://$PROJECT_DIR$/sistema/views/listaLivros.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="628">
-          <caret line="91" column="30" selection-start-line="91" selection-start-column="12" selection-end-line="91" selection-end-column="30" />
+        <state relative-caret-position="96">
+          <caret line="3" column="14" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sistema/views/menu.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="6" column="8" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
+        <state relative-caret-position="224">
+          <caret line="7" column="59" selection-start-line="7" selection-start-column="53" selection-end-line="7" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sistema/views/js/meujs.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="12" lean-forward="true" selection-start-column="12" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sistema/views/css/meuestilo.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3168">
+          <caret line="99" column="1" selection-start-line="99" selection-start-column="1" selection-end-line="99" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sistema/views/cadGenero.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sistema/views/js/vendor/jquery-1.12.0.min.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sistema/views/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-42912" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sistema/models/Genero.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="15" column="7" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sistema/views/shop.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sistema/controllers/ClienteController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1940">
+          <caret line="106" column="5" selection-start-line="106" selection-start-column="5" selection-end-line="106" selection-end-column="48" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sistema/views/login.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        <state relative-caret-position="224">
+          <caret line="7" column="30" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sistema/controllers/LivroController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="78" column="4" selection-start-line="78" selection-start-column="4" selection-end-line="78" selection-end-column="4" />
         </state>
       </provider>
     </entry>

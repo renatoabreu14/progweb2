@@ -76,6 +76,8 @@ class LivroController{
         return $arrRetorno;
     }
 
+
+
     private static function popularLivro($itemLista){
         $livro = new Livro();
         $livro->setId($itemLista['id']);
