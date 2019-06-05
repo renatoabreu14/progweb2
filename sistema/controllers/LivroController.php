@@ -76,7 +76,20 @@ class LivroController{
         return $arrRetorno;
     }
 
+    public static function trazerTodosPorGenero($genero){
+        $sql = "SELECT l.*, g.nome AS genero, e.nome AS editora FROM livro l INNER JOIN genero g ON g.id = l.idgenero INNER JOIN editora e ON e.id = l.ideditora WHERE l.idgenero = :genero";
+        $db = Conexao::getInstance();
+        $stmt = $db->prepare($sql);
+        $stmt->bindValue(':genero', $genero);
+        $stmt->execute();
+        $listagem = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
+        $arrRetorno = array();
+        foreach ($listagem as $itemLista){
+            $arrRetorno[] = self::popularLivro($itemLista);
+        }
+        return $arrRetorno;
+    }
 
     private static function popularLivro($itemLista){
         $livro = new Livro();

@@ -6,7 +6,7 @@ $listaGeneros = GeneroController::trazerTodos();
 
 $listaLivros = null;
 if (isset($_GET['genero'])){
-    $listaLivros = null;
+    $listaLivros = LivroController::trazerTodosPorGenero($_GET['genero']);
 }else{
     $listaLivros = LivroController::trazerTodos();
 }
@@ -86,7 +86,7 @@ if (isset($_GET['genero'])){
                                     <div class="add-to-cart-product">
                                         <div class="cart-product">
                                             <div class="cart-product-image">
-                                                <a href="single-product.html">
+                                                <a href="single-product.php">
                                                     <img src="img/shop/1.jpg" alt="">
                                                 </a>
                                             </div>
@@ -94,9 +94,9 @@ if (isset($_GET['genero'])){
                                                 <p>
                                                     <span>1</span>
                                                     x
-                                                    <a href="single-product.html">East of eden</a>
+                                                    <a href="single-product.php">East of eden</a>
                                                 </p>
-                                                <a href="single-product.html">S, Orange</a>
+                                                <a href="single-product.php">S, Orange</a>
                                                 <span class="cart-price">$ 140.00</span>
                                             </div>
                                             <div class="cart-product-remove">
@@ -105,7 +105,7 @@ if (isset($_GET['genero'])){
                                         </div>
                                         <div class="cart-product">
                                             <div class="cart-product-image">
-                                                <a href="single-product.html">
+                                                <a href="single-product.php">
                                                     <img src="img/shop/1.jpg" alt="">
                                                 </a>
                                             </div>
@@ -113,9 +113,9 @@ if (isset($_GET['genero'])){
                                                 <p>
                                                     <span>1</span>
                                                     x
-                                                    <a href="single-product.html">East of eden</a>
+                                                    <a href="single-product.php">East of eden</a>
                                                 </p>
-                                                <a href="single-product.html">S, Orange</a>
+                                                <a href="single-product.php">S, Orange</a>
                                                 <span class="cart-price">$ 140.00</span>
                                             </div>
                                             <div class="cart-product-remove">
@@ -160,7 +160,7 @@ if (isset($_GET['genero'])){
                                             <li><a href="login.html">Login</a></li>
                                             <li><a href="my-account.html">My Account</a></li>
                                             <li><a href="shop.php">Shopping Page</a></li>
-                                            <li><a href="single-product.html">Single Shop Page</a></li>
+                                            <li><a href="single-product.php">Single Shop Page</a></li>
                                             <li><a href="wishlist.html">Wishlist Page</a></li>
                                             <li><a href="404.html">404 Page</a></li>
                                         </ul>
@@ -184,7 +184,7 @@ if (isset($_GET['genero'])){
                                     <div class="add-to-cart-product">
                                         <div class="cart-product">
                                             <div class="cart-product-image">
-                                                <a href="single-product.html">
+                                                <a href="single-product.php">
                                                     <img src="img/shop/1.jpg" alt="">
                                                 </a>
                                             </div>
@@ -192,9 +192,9 @@ if (isset($_GET['genero'])){
                                                 <p>
                                                     <span>1</span>
                                                     x
-                                                    <a href="single-product.html">East of eden</a>
+                                                    <a href="single-product.php">East of eden</a>
                                                 </p>
-                                                <a href="single-product.html">S, Orange</a>
+                                                <a href="single-product.php">S, Orange</a>
                                                 <span class="cart-price">$ 140.00</span>
                                             </div>
                                             <div class="cart-product-remove">
@@ -203,7 +203,7 @@ if (isset($_GET['genero'])){
                                         </div>
                                         <div class="cart-product">
                                             <div class="cart-product-image">
-                                                <a href="single-product.html">
+                                                <a href="single-product.php">
                                                     <img src="img/shop/1.jpg" alt="">
                                                 </a>
                                             </div>
@@ -211,9 +211,9 @@ if (isset($_GET['genero'])){
                                                 <p>
                                                     <span>1</span>
                                                     x
-                                                    <a href="single-product.html">East of eden</a>
+                                                    <a href="single-product.php">East of eden</a>
                                                 </p>
-                                                <a href="single-product.html">S, Orange</a>
+                                                <a href="single-product.php">S, Orange</a>
                                                 <span class="cart-price">$ 140.00</span>
                                             </div>
                                             <div class="cart-product-remove">
@@ -266,7 +266,7 @@ if (isset($_GET['genero'])){
                                             <li><a href="login.html">Login</a></li>
                                             <li><a href="my-account.html">My Account</a></li>
                                             <li><a href="shop.php">Shopping Page</a></li>
-                                            <li><a href="single-product.html">Single Shop Page</a></li>
+                                            <li><a href="single-product.php">Single Shop Page</a></li>
                                             <li><a href="wishlist.html">Wishlist Page</a></li>
                                             <li><a href="404.html">404 Page</a></li>
                                         </ul>
@@ -469,7 +469,7 @@ if (isset($_GET['genero'])){
 												</div>
 												<div class="banner-bottom text-center">
 													<div class="banner-bottom-title">
-														<a href="#"><?php echo $livro->getTitulo();?></a>
+														<a href="single-product.php?livro=<?php echo $livro->getId();?>"><?php echo $livro->getTitulo();?></a>
                                                         <div class=""><span>R$ </span><?php echo $livro->getValor();?></div>
 													</div>
 													<!--<div class="rating-icon">
