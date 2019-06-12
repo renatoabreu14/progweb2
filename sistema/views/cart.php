@@ -1,9 +1,12 @@
 <?php
-require_once "../controllers/LivroController.php";
+session_start();
+require_once "../controllers/CarrinhoController.php";
 
-$livro = new Livro();
 if (isset($_GET['livro'])){
-    $livro = LivroController::buscarLivro($_GET['livro']);
+    CarrinhoController::adicionarItem($_GET['livro']);
+}
+if (isset($_GET['excluir'])){
+    CarrinhoController::removerItemCarrinho($_GET['excluir']);
 }
 ?>
 
@@ -12,7 +15,7 @@ if (isset($_GET['livro'])){
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Product Details || Witter Multipage Responsive Template</title>
+        <title>Carrinho de compras || PW2</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- favicon -->
@@ -57,7 +60,7 @@ if (isset($_GET['livro'])){
 
         <!-- Add your site or application content here -->
         <!--Header Area Start-->
-        <!--<div class="header-area">
+        <div class="header-area">
             <div class="container">
                 <div class="row">
                     <div class="col-md-2 col-sm-6 col-xs-6">
@@ -81,7 +84,7 @@ if (isset($_GET['livro'])){
                                     <div class="add-to-cart-product">
                                         <div class="cart-product">
                                             <div class="cart-product-image">
-                                                <a href="single-product.php">
+                                                <a href="single-product.html">cart
                                                     <img src="img/shop/1.jpg" alt="">
                                                 </a>
                                             </div>
@@ -89,9 +92,9 @@ if (isset($_GET['livro'])){
                                                 <p>
                                                     <span>1</span>
                                                     x
-                                                    <a href="single-product.php">East of eden</a>
+                                                    <a href="single-product.html">East of eden</a>
                                                 </p>
-                                                <a href="single-product.php">S, Orange</a>
+                                                <a href="single-product.html">S, Orange</a>
                                                 <span class="cart-price">$ 140.00</span>
                                             </div>
                                             <div class="cart-product-remove">
@@ -100,7 +103,7 @@ if (isset($_GET['livro'])){
                                         </div>
                                         <div class="cart-product">
                                             <div class="cart-product-image">
-                                                <a href="single-product.php">
+                                                <a href="single-product.html">
                                                     <img src="img/shop/1.jpg" alt="">
                                                 </a>
                                             </div>
@@ -108,9 +111,9 @@ if (isset($_GET['livro'])){
                                                 <p>
                                                     <span>1</span>
                                                     x
-                                                    <a href="single-product.php">East of eden</a>
+                                                    <a href="single-product.html">East of eden</a>
                                                 </p>
-                                                <a href="single-product.php">S, Orange</a>
+                                                <a href="single-product.html">S, Orange</a>
                                                 <span class="cart-price">$ 140.00</span>
                                             </div>
                                             <div class="cart-product-remove">
@@ -149,13 +152,13 @@ if (isset($_GET['livro'])){
                                     <li><a href="#">pages</a>
                                         <ul class="sub-menu">
                                             <li><a href="about.html">About Us</a></li>
-                                            <li><a href="cart.html">Cart Page</a></li>
+                                            <li><a href="cart.php">Cart Page</a></li>
                                             <li><a href="checkout.html">Check Out</a></li>
                                             <li><a href="contact.html">Contact</a></li>
                                             <li><a href="login.html">Login</a></li>
                                             <li><a href="my-account.html">My Account</a></li>
                                             <li><a href="shop.html">Shopping Page</a></li>
-                                            <li><a href="single-product.php">Single Shop Page</a></li>
+                                            <li><a href="single-product.html">Single Shop Page</a></li>
                                             <li><a href="wishlist.html">Wishlist Page</a></li>
                                             <li><a href="404.html">404 Page</a></li>
                                         </ul>
@@ -179,7 +182,7 @@ if (isset($_GET['livro'])){
                                     <div class="add-to-cart-product">
                                         <div class="cart-product">
                                             <div class="cart-product-image">
-                                                <a href="single-product.php">
+                                                <a href="single-product.html">
                                                     <img src="img/shop/1.jpg" alt="">
                                                 </a>
                                             </div>
@@ -187,9 +190,9 @@ if (isset($_GET['livro'])){
                                                 <p>
                                                     <span>1</span>
                                                     x
-                                                    <a href="single-product.php">East of eden</a>
+                                                    <a href="single-product.html">East of eden</a>
                                                 </p>
-                                                <a href="single-product.php">S, Orange</a>
+                                                <a href="single-product.html">S, Orange</a>
                                                 <span class="cart-price">$ 140.00</span>
                                             </div>
                                             <div class="cart-product-remove">
@@ -198,7 +201,7 @@ if (isset($_GET['livro'])){
                                         </div>
                                         <div class="cart-product">
                                             <div class="cart-product-image">
-                                                <a href="single-product.php">
+                                                <a href="single-product.html">
                                                     <img src="img/shop/1.jpg" alt="">
                                                 </a>
                                             </div>
@@ -206,9 +209,9 @@ if (isset($_GET['livro'])){
                                                 <p>
                                                     <span>1</span>
                                                     x
-                                                    <a href="single-product.php">East of eden</a>
+                                                    <a href="single-product.html">East of eden</a>
                                                 </p>
-                                                <a href="single-product.php">S, Orange</a>
+                                                <a href="single-product.html">S, Orange</a>
                                                 <span class="cart-price">$ 140.00</span>
                                             </div>
                                             <div class="cart-product-remove">
@@ -238,7 +241,7 @@ if (isset($_GET['livro'])){
                     </div>
                 </div>
             </div>
-        </div>-->
+        </div>
         <!--Header Area End-->
 		<!-- Mobile Menu Start -->
 		<div class="mobile-menu-area">
@@ -261,7 +264,7 @@ if (isset($_GET['livro'])){
                                             <li><a href="login.html">Login</a></li>
                                             <li><a href="my-account.html">My Account</a></li>
                                             <li><a href="shop.html">Shopping Page</a></li>
-                                            <li><a href="single-product.php">Single Shop Page</a></li>
+                                            <li><a href="single-product.html">Single Shop Page</a></li>
                                             <li><a href="wishlist.html">Wishlist Page</a></li>
                                             <li><a href="404.html">404 Page</a></li>
                                         </ul>
@@ -281,12 +284,12 @@ if (isset($_GET['livro'])){
 				<div class="row">
 					<div class="col-md-12">
 					    <div class="breadcrumbs">
-					       <h2>PRODUCT DETAILS</h2> 
+					       <h2>SHOPPING CART</h2> 
 					       <ul class="breadcrumbs-list">
 						        <li>
 						            <a title="Return to Home" href="index.html">Home</a>
 						        </li>
-						        <li>Product Details</li>
+						        <li>Shopping Cart</li>
 						    </ul>
 					    </div>
 					</div>
@@ -294,350 +297,116 @@ if (isset($_GET['livro'])){
 			</div>
 		</div> 
 		<!-- Breadcrumbs Area Start --> 
-        <!-- Single Product Area Start -->
-        <div class="single-product-area section-padding">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6 col-sm-7">
-                        <div class="single-product-image-inner">
-                            <!-- Tab panes -->
-                            <div class="tab-content">
-                                <div role="tabpanel" class="tab-pane active" id="one">
-                                    <a class="venobox" href="img/single-product/bg-1.jpg" data-gall="gallery" title="">
-                                        <img src="images/<?php echo $livro->getCapaImagem();?>" alt="" width="550" height="570">
-                                    </a>
-                                </div>
-                                <!--<div role="tabpanel" class="tab-pane" id="two">
-                                    <a class="venobox" href="img/single-product/bg-2.jpg" data-gall="gallery" title="">
-                                        <img src="img/single-product/bg-2.jpg" alt="">
-                                    </a>
-                                </div>
-                                <div role="tabpanel" class="tab-pane" id="three">
-                                    <a class="venobox" href="img/single-product/bg-3.jpg" data-gall="gallery" title="">
-                                        <img src="img/single-product/bg-3.jpg" alt="">
-                                    </a>
-                                </div>-->
-                            </div>
-                            <!-- Nav tabs -->
-                            <ul class="product-tabs" role="tablist">
-                                <li role="presentation" class="active"><a href="#one" aria-controls="one" role="tab" data-toggle="tab"><img src="images/<?php echo $livro->getCapaImagem();?>" alt="" width="150" height="160"></a></li>
-                                <!--<li role="presentation"><a href="#two" aria-controls="two" role="tab" data-toggle="tab"><img src="img/single-product/2.jpg" alt=""></a></li>
-                                <li role="presentation"><a href="#three" aria-controls="three" role="tab" data-toggle="tab"><img src="img/single-product/3.jpg" alt=""></a></li>-->
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-sm-5">
-                        <div class="single-product-details">
-                            <div class="list-pro-rating">
-                                <i class="fa fa-star icolor"></i>
-                                <i class="fa fa-star icolor"></i>
-                                <i class="fa fa-star icolor"></i>
-                                <i class="fa fa-star icolor"></i>
-                                <i class="fa fa-star"></i>
-                            </div>
-                            <h2><?php echo $livro->getTitulo();?></h2>
-                            <div class="availability">
-                                <span>Em estoque</span>
-                            </div>
-                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. </p>
-                            <div class="single-product-price">
-                                <h2>R$<?php echo $livro->getValor();?></h2>
-                            </div>
-                            <div class="product-attributes clearfix">
-                                <!--<span class="pull-left" id="quantity-wanted-p">
-									<span class="dec qtybutton">-</span>
-									<input type="text" value="1" class="cart-plus-minus-box">
-									<span class="inc qtybutton">+</span>	
-								</span>-->
-                               <span>
-                                    <a class="cart-btn btn-default" href="cart.php?livro=<?php echo $livro->getId();?>">
-                                        <i class="flaticon-shop"></i>
-                                        Adicionar ao carrinho
-                                    </a>
-                               </span>
-                            </div>
-                            <!--<div class="add-to-wishlist">
-                                <a class="wish-btn" href="cart.html">
-                                    <i class="fa fa-heart-o"></i>
-                                    ADD TO WISHLIST
-                                </a>
-                            </div>-->
-                            <div class="single-product-categories">
-                               <label>Genero:</label>
-                                <span><?php echo $livro->getGenero()->getNome();?></span>
-                            </div>
-                            <!--<div class="social-share">
-                                <label>Share: </label>
-                                <ul class="social-share-icon">
-                                    <li><a href="#"><i class="flaticon-social"></i></a></li>
-                                    <li><a href="#"><i class="flaticon-social-1"></i></a></li>
-                                    <li><a href="#"><i class="flaticon-social-2"></i></a></li>
-                                </ul> 
-                            </div>-->
-                            <div id="product-comments-block-extra">
-								<ul class="comments-advices">
-									<li>
-										<a href="#" class="open-comment-form">Write a review</a>
-									</li>
-								</ul>
-							</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-					<div class="col-md-9">
-                        <div class="p-details-tab-content">
-                            <div class="p-details-tab">
-                                <ul class="p-details-nav-tab" role="tablist">
-                                    <li role="presentation" class="active"><a href="#more-info" aria-controls="more-info" role="tab" data-toggle="tab">Descrição</a></li>
-                                    <li role="presentation"><a href="#data" aria-controls="data" role="tab" data-toggle="tab">Review</a></li>
-                                    <li role="presentation"><a href="#reviews" aria-controls="reviews" role="tab" data-toggle="tab">Tab</a></li>
-                                </ul>
-                            </div>
-                            <div class="clearfix"></div>
-                            <div class="tab-content review">
-                                <div role="tabpanel" class="tab-pane active" id="more-info">
-                                    <p><?php echo $livro->getDescricao();?></p>
-                                </div>
-                                <div role="tabpanel" class="tab-pane" id="data">
-                                    <table class="table-data-sheet">
+		<!-- Cart Area Start -->
+        <?php
+            if (!isset($_SESSION['carrinho'])){
+                echo "<br><h3 align='center'>Carrinho de compras vazio</h3>";
+                echo "<br><br><br><br>";
+                echo "<p align='center'><a class='btn btn-primary' href='shop.php'>Voltar para o Shopping</a></p>";
+            }else {
+                ?>
+                <div class="shopping-cart-area section-padding">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="wishlist-table-area table-responsive">
+                                    <table>
+                                        <thead>
+                                        <tr>
+                                            <th class="product-remove">Excluir</th>
+                                            <th class="product-image">Imagem</th>
+                                            <th class="t-product-name">Título do Livro</th>
+                                            <th class="product-unit-price">Valor Unitário</th>
+                                            <th class="product-quantity">Quantidade</th>
+                                            <th class="product-subtotal">Subtotal</th>
+                                        </tr>
+                                        </thead>
                                         <tbody>
-                                            <tr class="odd">
-                                                <td>Compositions</td>
-                                                <td>Cotton</td>
+                                        <?php
+                                        $carrinho = unserialize($_SESSION['carrinho']);
+                                        $posicao = 0;
+                                        foreach ($carrinho as $itemCarrinho) {
+                                            ?>
+                                            <tr>
+                                                <td class="product-remove">
+                                                    <a href="cart.php?excluir=<?php echo $posicao;?>">
+                                                        <i class="flaticon-delete"></i>
+                                                    </a>
+                                                </td>
+                                                <td class="product-image">
+                                                    <a href="#">
+                                                        <img src="images/<?php echo $itemCarrinho->getLivro()->getCapaImagem();?>" alt="" width="104" height="104">
+                                                    </a>
+                                                </td>
+                                                <td class="t-product-name">
+                                                    <h3>
+                                                        <a href="#"><?php echo $itemCarrinho->getLivro()->getTitulo();?></a>
+                                                    </h3>
+                                                </td>
+                                                <td class="product-unit-price">
+                                                    <p>R$ <?php echo $itemCarrinho->getLivro()->getValor();?></p>
+                                                </td>
+                                                <td class="product-quantity product-cart-details">
+                                                    <input type="number" value="<?php echo $itemCarrinho->getQuantidade();?>">
+                                                </td>
+                                                <td class="product-quantity">
+                                                    <p>R$ <?php echo $itemCarrinho->getQuantidade() * $itemCarrinho->getLivro()->getValor();?></p>
+                                                </td>
                                             </tr>
-                                            <tr class="even">
-                                                <td>Styles</td>
-                                                <td>Casual</td>
-                                            </tr>
-                                            <tr class="odd">
-                                                <td>Properties</td>
-                                                <td>Short Sleeve</td>
-                                            </tr>
+                                            <?php
+                                        $posicao++;
+                                        }
+                                        ?>
                                         </tbody>
-                                   </table>
+                                    </table>
                                 </div>
-                                <div role="tabpanel" class="tab-pane" id="reviews">
-                                    <div id="product-comments-block-tab">
-                                        <a href="#" class="comment-btn"><span>Be the first to write your review!</span></a>
+                                <div class="shopingcart-bottom-area">
+                                    <a class="left-shoping-cart" href="shop.php">CONTINUE COMPRANDO</a>
+                                    <div class="shopingcart-bottom-area pull-right">
+                                        <a class="right-shoping-cart" href="#">CLEAR SHOPPING CART</a>
+                                        <a class="right-shoping-cart" href="#">UPDATE SHOPPING CART</a>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-					</div>
-				</div>  
-            </div>
-        </div>
-        <!-- Single Product Area End -->
-        <!-- Related Product Area Start -->
-        <!--<div class="related-product-area">
-            <h2 class="section-title">RELATED PRODUCTS</h2>
-            <div class="container">
-                <div class="row">
-                    <div class="related-product indicator-style">
-                        <div class="col-md-3">
-                            <div class="single-banner">
-                                <div class="product-wrapper">
-                                    <a href="#" class="single-banner-image-wrapper">
-                                        <img alt="" src="img/featured/1.jpg">
-                                        <div class="price"><span>$</span>160</div>
-                                        <div class="rating-icon">
-                                            <i class="fa fa-star icolor"></i>
-                                            <i class="fa fa-star icolor"></i>
-                                            <i class="fa fa-star icolor"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                        </div>
-                                    </a>
-                                    <div class="product-description">
-                                        <div class="functional-buttons">
-                                            <a href="#" title="Add to Cart">
-                                                <i class="fa fa-shopping-cart"></i>
-                                            </a>
-                                            <a href="#" title="Add to Wishlist">
-                                                <i class="fa fa-heart-o"></i>
-                                            </a>
-                                            <a href="#" title="Quick View">
-                                                <i class="fa fa-compress"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="banner-bottom text-center">
-                                    <a href="#">People of the book</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="single-banner">
-                                <div class="product-wrapper">
-                                    <a href="#" class="single-banner-image-wrapper">
-                                        <img alt="" src="img/featured/2.jpg">
-                                        <div class="price"><span>$</span>160</div>
-                                        <div class="rating-icon">
-                                            <i class="fa fa-star icolor"></i>
-                                            <i class="fa fa-star icolor"></i>
-                                            <i class="fa fa-star icolor"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                        </div>
-                                    </a>
-                                    <div class="product-description">
-                                        <div class="functional-buttons">
-                                            <a href="#" title="Add to Cart">
-                                                <i class="fa fa-shopping-cart"></i>
-                                            </a>
-                                            <a href="#" title="Add to Wishlist">
-                                                <i class="fa fa-heart-o"></i>
-                                            </a>
-                                            <a href="#" title="Quick view" data-toggle="modal" data-target="#productModal">
-                                                <i class="fa fa-compress"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="banner-bottom text-center">
-                                    <a href="#">East of eden</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="single-banner">
-                                <div class="product-wrapper">
-                                    <a href="#" class="single-banner-image-wrapper">
-                                        <img alt="" src="img/featured/3.jpg">
-                                        <div class="price"><span>$</span>160</div>
-                                        <div class="rating-icon">
-                                            <i class="fa fa-star icolor"></i>
-                                            <i class="fa fa-star icolor"></i>
-                                            <i class="fa fa-star icolor"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                        </div>
-                                    </a>
-                                    <div class="product-description">
-                                        <div class="functional-buttons">
-                                            <a href="#" title="Add to Cart">
-                                                <i class="fa fa-shopping-cart"></i>
-                                            </a>
-                                            <a href="#" title="Add to Wishlist">
-                                                <i class="fa fa-heart-o"></i>
-                                            </a>
-                                            <a href="#" title="Quick view" data-toggle="modal" data-target="#productModal">
-                                                <i class="fa fa-compress"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="banner-bottom text-center">
-                                    <a href="#">Lone some dove</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="single-banner">
-                                <div class="product-wrapper">
-                                    <a href="#" class="single-banner-image-wrapper">
-                                        <img alt="" src="img/featured/4.jpg">
-                                        <div class="price"><span>$</span>160</div>
-                                        <div class="rating-icon">
-                                            <i class="fa fa-star icolor"></i>
-                                            <i class="fa fa-star icolor"></i>
-                                            <i class="fa fa-star icolor"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                        </div>
-                                    </a>
-                                    <div class="product-description">
-                                        <div class="functional-buttons">
-                                            <a href="#" title="Add to Cart">
-                                                <i class="fa fa-shopping-cart"></i>
-                                            </a>
-                                            <a href="#" title="Add to Wishlist">
-                                                <i class="fa fa-heart-o"></i>
-                                            </a>
-                                            <a href="#" title="Quick view" data-toggle="modal" data-target="#productModal">
-                                                <i class="fa fa-compress"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="banner-bottom text-center">
-                                    <a href="#">The secret garden</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="single-banner">
-                                <div class="product-wrapper">
-                                    <a href="#" class="single-banner-image-wrapper">
-                                        <img alt="" src="img/featured/5.jpg">
-                                        <div class="price"><span>$</span>160</div>
-                                        <div class="rating-icon">
-                                            <i class="fa fa-star icolor"></i>
-                                            <i class="fa fa-star icolor"></i>
-                                            <i class="fa fa-star icolor"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                        </div>
-                                    </a>
-                                    <div class="product-description">
-                                        <div class="functional-buttons">
-                                            <a href="#" title="Add to Cart">
-                                                <i class="fa fa-shopping-cart"></i>
-                                            </a>
-                                            <a href="#" title="Add to Wishlist">
-                                                <i class="fa fa-heart-o"></i>
-                                            </a>
-                                            <a href="#" title="Quick view" data-toggle="modal" data-target="#productModal">
-                                                <i class="fa fa-compress"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="banner-bottom text-center">
-                                    <a href="#">Twilight</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                               <div class="single-banner">
-                                <div class="product-wrapper">
-                                    <a href="#" class="single-banner-image-wrapper">
-                                        <img alt="" src="img/featured/6.jpg">
-                                        <div class="price"><span>$</span>160</div>
-                                        <div class="rating-icon">
-                                            <i class="fa fa-star icolor"></i>
-                                            <i class="fa fa-star icolor"></i>
-                                            <i class="fa fa-star icolor"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                        </div>
-                                    </a>
-                                    <div class="product-description">
-                                        <div class="functional-buttons">
-                                            <a href="#" title="Add to Cart">
-                                                <i class="fa fa-shopping-cart"></i>
-                                            </a>
-                                            <a href="#" title="Add to Wishlist">
-                                                <i class="fa fa-heart-o"></i>
-                                            </a>
-                                            <a href="#" title="Quick view" data-toggle="modal" data-target="#productModal">
-                                                <i class="fa fa-compress"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="banner-bottom text-center">
-                                    <a href="#">Cold mountain</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>-->
-        <!-- Related Product Area End -->
+                <!-- Cart Area End -->
+                <!-- Discount Area Start -->
+                <div class="discount-area">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6">
+                                <div class="discount-main-area">
+                                    <div class="discount-top">
+                                        <h3>DISCOUNT CODE</h3>
+                                        <p>Enter your coupon code if have one</p>
+                                    </div>
+                                    <div class="discount-middle">
+                                        <input type="text" placeholder="">
+                                        <a class="" href="#">APPLY COUPON</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-6">
+                                <div class="subtotal-main-area">
+                                    <div class="subtotal-area">
+                                        <h2>SUBTOTAL<span>$ 200</span></h2>
+                                    </div>
+                                    <div class="subtotal-area">
+                                        <h2>GRAND TOTAL<span>$ 200</span></h2>
+                                    </div>
+                                    <a href="#">CHECKOUT</a>
+                                    <p>Checkout With Multiple Addresses</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <?php
+            }
+        ?>
+        <!-- Discount Area End -->	
 		<!-- Footer Area Start -->
 		<footer>
 		    <div class="footer-top-area">

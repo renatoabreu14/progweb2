@@ -2,13 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f6082895-7e42-4471-8ae3-91649a3b22ae" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/sistema/models/ItemCarrinho.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sistema/models/ItemVenda.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sistema/models/Venda.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sistema/views/single-product.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistema/controllers/CarrinhoController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistema/views/cart.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sistema/controllers/LivroController.php" beforeDir="false" afterPath="$PROJECT_DIR$/sistema/controllers/LivroController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sistema/views/shop.php" beforeDir="false" afterPath="$PROJECT_DIR$/sistema/views/shop.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sistema/views/single-product.php" beforeDir="false" afterPath="$PROJECT_DIR$/sistema/views/single-product.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -24,46 +22,37 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sistema/views/listaLivros.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="96">
-              <caret line="3" column="14" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sistema/views/cadGenero.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sistema/views/login.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="224">
-              <caret line="7" column="30" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sistema/views/shop.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="471" column="117" selection-start-line="471" selection-start-column="117" selection-end-line="471" selection-end-column="117" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sistema/controllers/LivroController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-652">
+            <state relative-caret-position="756">
               <caret line="78" column="4" lean-forward="true" selection-start-line="78" selection-start-column="4" selection-end-line="91" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sistema/models/ItemCarrinho.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="448">
+              <caret line="14" column="35" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sistema/views/cart.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="288">
+              <caret line="9" column="1" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/sistema/controllers/CarrinhoController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="642">
+              <caret line="43" column="13" lean-forward="true" selection-start-line="43" selection-start-column="13" selection-end-line="43" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -71,44 +60,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sistema/views/single-product.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="515">
-              <caret line="318" column="41" lean-forward="true" selection-start-line="309" selection-start-column="32" selection-end-line="318" selection-end-column="41" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sistema/models/Venda.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="15" column="39" selection-start-line="15" selection-start-column="39" selection-end-line="15" selection-end-column="39" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sistema/models/ItemVenda.php">
-          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="608">
-              <caret line="19" column="35" selection-start-line="19" selection-start-column="35" selection-end-line="19" selection-end-column="35" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/sistema/models/ItemCarrinho.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1504">
-              <caret line="47" column="5" selection-start-line="47" selection-start-column="5" selection-end-line="47" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sistema/models/Genero.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="15" column="7" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
+              <caret line="352" column="83" selection-start-line="352" selection-start-column="82" selection-end-line="352" selection-end-column="83" />
             </state>
           </provider>
         </entry>
@@ -173,11 +126,13 @@
         <option value="$PROJECT_DIR$/sistema/views/menu.php" />
         <option value="$PROJECT_DIR$/sistema/controllers/ClienteController.php" />
         <option value="$PROJECT_DIR$/sistema/controllers/LivroController.php" />
-        <option value="$PROJECT_DIR$/sistema/views/shop.php" />
-        <option value="$PROJECT_DIR$/sistema/views/single-product.php" />
         <option value="$PROJECT_DIR$/sistema/models/Venda.php" />
         <option value="$PROJECT_DIR$/sistema/models/ItemVenda.php" />
         <option value="$PROJECT_DIR$/sistema/models/ItemCarrinho.php" />
+        <option value="$PROJECT_DIR$/sistema/views/shop.php" />
+        <option value="$PROJECT_DIR$/sistema/views/single-product.php" />
+        <option value="$PROJECT_DIR$/sistema/views/cart.php" />
+        <option value="$PROJECT_DIR$/sistema/controllers/CarrinhoController.php" />
       </list>
     </option>
   </component>
@@ -212,7 +167,19 @@
               <item name="public_html" type="b2602c69:ProjectViewProjectNode" />
               <item name="public_html" type="462c0819:PsiDirectoryNode" />
               <item name="sistema" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="public_html" type="b2602c69:ProjectViewProjectNode" />
+              <item name="public_html" type="462c0819:PsiDirectoryNode" />
+              <item name="sistema" type="462c0819:PsiDirectoryNode" />
               <item name="models" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="public_html" type="b2602c69:ProjectViewProjectNode" />
+              <item name="public_html" type="462c0819:PsiDirectoryNode" />
+              <item name="sistema" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -232,15 +199,15 @@
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/sistema/views" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/sistema/views" />
       <recent name="$PROJECT_DIR$/sistema/views/js" />
       <recent name="$PROJECT_DIR$/sistema/views/css" />
       <recent name="$PROJECT_DIR$/sistema/js" />
       <recent name="$PROJECT_DIR$/sistema" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/sistema/views" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -281,7 +248,9 @@
       <workItem from="1558199167659" duration="8752000" />
       <workItem from="1558210518011" duration="69000" />
       <workItem from="1559082446427" duration="6414000" />
-      <workItem from="1559693532468" duration="2011000" />
+      <workItem from="1559693532468" duration="2212000" />
+      <workItem from="1559696849437" duration="705000" />
+      <workItem from="1560291071556" duration="6062000" />
     </task>
     <task id="LOCAL-00001" summary="Música infantis">
       <created>1553044411879</created>
@@ -360,18 +329,25 @@
       <option name="project" value="LOCAL" />
       <updated>1559091774406</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Aula do dia 04/06/2019">
+      <created>1559696408450</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1559696408450</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="89423000" />
+    <option name="totallyTimeSpent" value="96391000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.20691578" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.21360847" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="0" />
       <window_info anchor="bottom" id="Database Changes" order="1" />
@@ -427,7 +403,8 @@
     <MESSAGE value="Aula do dia 18/05/2019&#10;Sistema de login com sessão" />
     <MESSAGE value="Aula do dia 28/05/2019&#10;Sistema de login com sessão&#10;Template da loja virtual já adaptado" />
     <MESSAGE value="Aula do dia 28/05/2019&#10;bkp bd" />
-    <option name="LAST_COMMIT_MESSAGE" value="Aula do dia 28/05/2019&#10;bkp bd" />
+    <MESSAGE value="Aula do dia 04/06/2019" />
+    <option name="LAST_COMMIT_MESSAGE" value="Aula do dia 04/06/2019" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/sistema/views/js/bootstrap.bundle.js">
@@ -608,24 +585,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sistema/views/listaLivros.php">
+    <entry file="file://$PROJECT_DIR$/sistema/models/Venda.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="3" column="14" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sistema/views/cadGenero.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sistema/views/login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="7" column="30" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
+        <state relative-caret-position="480">
+          <caret line="15" column="39" selection-start-line="15" selection-start-column="39" selection-end-line="15" selection-end-column="39" />
         </state>
       </provider>
     </entry>
@@ -636,31 +599,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sistema/controllers/LivroController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-652">
-          <caret line="78" column="4" lean-forward="true" selection-start-line="78" selection-start-column="4" selection-end-line="91" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sistema/views/shop.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="471" column="117" selection-start-line="471" selection-start-column="117" selection-end-line="471" selection-end-column="117" />
+        <state relative-caret-position="404">
+          <caret line="466" column="65" lean-forward="true" selection-start-line="456" selection-start-column="56" selection-end-line="466" selection-end-column="65" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sistema/views/single-product.php">
+    <entry file="file://$PROJECT_DIR$/sistema/views/login.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="515">
-          <caret line="318" column="41" lean-forward="true" selection-start-line="309" selection-start-column="32" selection-end-line="318" selection-end-column="41" />
+        <state relative-caret-position="224">
+          <caret line="7" column="30" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sistema/models/Venda.php">
+    <entry file="file://$PROJECT_DIR$/sistema/views/cadGenero.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="15" column="39" selection-start-line="15" selection-start-column="39" selection-end-line="15" selection-end-column="39" />
+        <state relative-caret-position="320">
+          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sistema/views/listaLivros.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="3" column="14" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
         </state>
       </provider>
     </entry>
@@ -671,10 +634,41 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/sistema/controllers/LivroController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="756">
+          <caret line="78" column="4" lean-forward="true" selection-start-line="78" selection-start-column="4" selection-end-line="91" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sistema/views/single-product.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="608">
+          <caret line="352" column="83" selection-start-line="352" selection-start-column="82" selection-end-line="352" selection-end-column="83" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sistema/views/img/shop/1.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/sistema/models/ItemCarrinho.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1504">
-          <caret line="47" column="5" selection-start-line="47" selection-start-column="5" selection-end-line="47" selection-end-column="5" />
+        <state relative-caret-position="448">
+          <caret line="14" column="35" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sistema/views/cart.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="9" column="1" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sistema/controllers/CarrinhoController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="642">
+          <caret line="43" column="13" lean-forward="true" selection-start-line="43" selection-start-column="13" selection-end-line="43" selection-end-column="13" />
         </state>
       </provider>
     </entry>

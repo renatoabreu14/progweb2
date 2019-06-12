@@ -154,7 +154,7 @@ if (isset($_GET['genero'])){
                                     <li><a href="#">pages</a>
                                         <ul class="sub-menu">
                                             <li><a href="about.html">About Us</a></li>
-                                            <li><a href="cart.html">Cart Page</a></li>
+                                            <li><a href="cart.php">Cart Page</a></li>
                                             <li><a href="checkout.html">Check Out</a></li>
                                             <li><a href="contact.html">Contact</a></li>
                                             <li><a href="login.html">Login</a></li>
@@ -260,7 +260,7 @@ if (isset($_GET['genero'])){
                                     <li><a href="#">pages</a>
                                         <ul>
                                             <li><a href="about.html">About Us</a></li>
-                                            <li><a href="cart.html">Cart Page</a></li>
+                                            <li><a href="cart.php">Cart Page</a></li>
                                             <li><a href="checkout.html">Check Out</a></li>
                                             <li><a href="contact.html">Contact</a></li>
                                             <li><a href="login.html">Login</a></li>
@@ -454,7 +454,7 @@ if (isset($_GET['genero'])){
 														<img alt="" src="images/<?php echo $livro->getCapaImagem();?>">
 													</a>
 													<div class="product-description">
-														<div class="functional-buttons">
+														<!--<div class="functional-buttons">
 															<a href="#" title="Add to Cart">
 																<i class="fa fa-shopping-cart"></i>
 															</a>
@@ -464,7 +464,7 @@ if (isset($_GET['genero'])){
 															<a href="#" title="Quick view" data-toggle="modal" data-target="#productModal">
 																<i class="fa fa-compress"></i>
 															</a>
-														</div>
+														</div>-->
 													</div>
 												</div>
 												<div class="banner-bottom text-center">
@@ -951,7 +951,7 @@ if (isset($_GET['genero'])){
 		                        <ul class="footer-list">
 		                            <li><a href="my-account.html">My Account</a></li>
 		                            <li><a href="account.html">Login</a></li>
-		                            <li><a href="cart.html">My Cart</a></li>
+		                            <li><a href="cart.php">My Cart</a></li>
 		                            <li><a href="wishlist.html">Wishlist</a></li>
 		                            <li><a href="checkout.html">Checkout</a></li>
 		                        </ul>
