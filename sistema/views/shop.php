@@ -76,7 +76,7 @@ if (isset($_GET['genero'])){
                         <div class="header-right">
                             <ul>
                                 <li>
-                                    <a href="account.html"><i class="flaticon-people"></i></a>
+                                    <a href="my-account.php"><i class="flaticon-people"></i></a>
                                 </li>
                                 <li class="shoping-cart">
                                     <a href="#">
@@ -174,7 +174,7 @@ if (isset($_GET['genero'])){
                         <div class="header-right">
                             <ul>
                                 <li>
-                                    <a href="account.html"><i class="flaticon-people"></i></a>
+                                    <a href="my-account.php"><i class="flaticon-people"></i></a>
                                 </li>
                                 <li class="shoping-cart">
                                     <a href="#">
@@ -949,7 +949,7 @@ if (isset($_GET['genero'])){
 		                    <div class="single-footer">
 		                        <h2 class="footer-title">My Account</h2>
 		                        <ul class="footer-list">
-		                            <li><a href="my-account.html">My Account</a></li>
+		                            <li><a href="my-account.php">My Account</a></li>
 		                            <li><a href="account.html">Login</a></li>
 		                            <li><a href="cart.php">My Cart</a></li>
 		                            <li><a href="wishlist.html">Wishlist</a></li>

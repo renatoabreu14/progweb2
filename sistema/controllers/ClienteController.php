@@ -1,5 +1,6 @@
 <?php
 require_once "../models/Cliente.php";
+require_once "VendaController.php";
 require_once "Conexao.php";
 
 class ClienteController
@@ -76,6 +77,26 @@ class ClienteController
         }
     }
 
+    public static function loginshop($email, $senha){
+        $sql = "SELECT * FROM cliente WHERE email = :email AND senha = :senha";
+        $db = Conexao::getInstance();
+
+        $stmt = $db->prepare($sql);
+        $stmt->bindValue(':email', $email);
+        $stmt->bindValue(':senha', $senha);
+        $stmt->execute();
+
+        $listagem = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+        if (count($listagem) > 0){
+            $clientelogin = self::popularClienteLogin($listagem[0]);
+            $_SESSION['cliente'] = serialize($clientelogin);
+            return true;
+        }else{
+            return false;
+        }
+    }
+
     public static function login($email, $senha){
         $sql = "SELECT * FROM cliente WHERE email = :email AND senha = :senha";
         $db = Conexao::getInstance();
@@ -125,6 +146,27 @@ class ClienteController
         $stmt = $db->prepare($sql);
         $stmt->bindValue(':id', $id);
         $stmt->execute();
+    }
+
+    public static function buscarPedidos($idcliente){
+        $sql = "SELECT v.id AS idvenda, DATE_FORMAT(v.datavenda, '%d/%m/%Y') as datavenda, v.fk_idcliente, 
+                    v.fk_idsituacao, c.*, s.descricao 
+                    FROM venda v 
+                    INNER JOIN situacao s ON v.fk_idsituacao = s.id 
+                    INNER JOIN cliente c ON v.fk_idcliente = c.id 
+                    WHERE fk_idcliente = :idcliente";
+        $db = Conexao::getInstance();
+
+        $stmt = $db->prepare($sql);
+        $stmt->bindValue(':idcliente', $idcliente);
+        $stmt->execute();
+        $listagem = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+        $arrRetorno = array();
+        foreach ($listagem as $itemLista){
+            $arrRetorno[] = VendaController::popularVenda($itemLista);
+        }
+        return $arrRetorno;
     }
 
 }

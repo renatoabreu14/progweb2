@@ -45,4 +45,16 @@ class CarrinhoController
         }
     }
 
+    public static function atualizarCarrinho($quantidades){
+        if (isset($_SESSION['carrinho'])) {
+            $carrinho = unserialize($_SESSION['carrinho']);
+            $pos = 0;
+            foreach ($quantidades as $key => $value) {
+                $carrinho[$pos]->setQuantidade($value);
+                $pos++;
+            }
+            $_SESSION['carrinho'] = serialize($carrinho);
+        }
+    }
+
 }

@@ -1,16 +1,37 @@
 <?php
 session_start();
-require_once "../controllers/CarrinhoController.php";
 
-if (isset($_GET['livro'])){
-    CarrinhoController::adicionarItem($_GET['livro']);
+require_once "../controllers/VendaController.php";
+require_once "../controllers/CarrinhoController.php";
+require_once "../controllers/ItemVendaController.php";
+
+if (!isset($_SESSION['cliente'])){
+    header('Location: loginshop.php');
+}else{
+    if (isset($_SESSION['carrinho'])) {
+        $venda = new Venda();
+        $venda->setCliente(unserialize($_SESSION['cliente']));
+        $venda->setDataVenda(date('Y-m-d'));
+        VendaController::inserir($venda);
+        $venda = VendaController::buscarVenda($venda);
+
+        $carrinho = unserialize($_SESSION['carrinho']);
+
+        foreach ($carrinho as $itemCarrinho) {
+            $itemVenda = new ItemVenda();
+            $itemVenda->setVenda($venda);
+            $itemVenda->setLivro($itemCarrinho->getLivro());
+            $itemVenda->setQuantidade($itemCarrinho->getQuantidade());
+            $itemVenda->setValorProduto($itemCarrinho->getLivro()->getValor());
+            ItemVendaController::inserir($itemVenda);
+        }
+        unset($_SESSION['carrinho']);
+    }
+
 }
-if (isset($_GET['excluir'])){
-    CarrinhoController::removerItemCarrinho($_GET['excluir']);
-}
-if (isset($_POST['qtd0'])){
-    CarrinhoController::atualizarCarrinho($_POST);
-}
+
+
+
 ?>
 
 <!doctype html>
@@ -18,7 +39,7 @@ if (isset($_POST['qtd0'])){
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Carrinho de compras || PW2</title>
+        <title>About Us || Witter Multipage Responsive Template</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- favicon -->
@@ -87,7 +108,7 @@ if (isset($_POST['qtd0'])){
                                     <div class="add-to-cart-product">
                                         <div class="cart-product">
                                             <div class="cart-product-image">
-                                                <a href="single-product.html">cart
+                                                <a href="single-product.html">
                                                     <img src="img/shop/1.jpg" alt="">
                                                 </a>
                                             </div>
@@ -155,7 +176,7 @@ if (isset($_POST['qtd0'])){
                                     <li><a href="#">pages</a>
                                         <ul class="sub-menu">
                                             <li><a href="about.html">About Us</a></li>
-                                            <li><a href="cart.php">Cart Page</a></li>
+                                            <li><a href="cart.html">Cart Page</a></li>
                                             <li><a href="checkout.html">Check Out</a></li>
                                             <li><a href="contact.html">Contact</a></li>
                                             <li><a href="login.html">Login</a></li>
@@ -261,7 +282,7 @@ if (isset($_POST['qtd0'])){
                                     <li><a href="#">pages</a>
                                         <ul>
                                             <li><a href="about.html">About Us</a></li>
-                                            <li><a href="cart.php">Cart Page</a></li>
+                                            <li><a href="cart.html">Cart Page</a></li>
                                             <li><a href="checkout.html">Check Out</a></li>
                                             <li><a href="contact.html">Contact</a></li>
                                             <li><a href="login.html">Login</a></li>
@@ -287,12 +308,12 @@ if (isset($_POST['qtd0'])){
 				<div class="row">
 					<div class="col-md-12">
 					    <div class="breadcrumbs">
-					       <h2>SHOPPING CART</h2> 
+					       <h2>About Us</h2> 
 					       <ul class="breadcrumbs-list">
 						        <li>
 						            <a title="Return to Home" href="index.html">Home</a>
 						        </li>
-						        <li>Shopping Cart</li>
+						        <li>About Us</li>
 						    </ul>
 					    </div>
 					</div>
@@ -300,121 +321,138 @@ if (isset($_POST['qtd0'])){
 			</div>
 		</div> 
 		<!-- Breadcrumbs Area Start --> 
-		<!-- Cart Area Start -->
-        <?php
-            if (!isset($_SESSION['carrinho'])){
-                echo "<br><h3 align='center'>Carrinho de compras vazio</h3>";
-                echo "<br><br><br><br>";
-                echo "<p align='center'><a class='btn btn-primary' href='shop.php'>Voltar para o Shopping</a></p>";
-            }else {
-                ?>
-                <div class="shopping-cart-area section-padding">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="wishlist-table-area table-responsive">
-                                    <form action="cart.php" method="post" id="formcarrinho">
-                                    <table>
-                                        <thead>
-                                        <tr>
-                                            <th class="product-remove">Excluir</th>
-                                            <th class="product-image">Imagem</th>
-                                            <th class="t-product-name">Título do Livro</th>
-                                            <th class="product-unit-price">Valor Unitário</th>
-                                            <th class="product-quantity">Quantidade</th>
-                                            <th class="product-subtotal">Subtotal</th>
-                                        </tr>
-                                        </thead>
-                                        <tbody>
-                                        <?php
-                                        $carrinho = unserialize($_SESSION['carrinho']);
-                                        $posicao = 0;
-                                        $total = 0;
-                                        foreach ($carrinho as $itemCarrinho) {
-                                            ?>
-                                            <tr>
-                                                <td class="product-remove">
-                                                    <a href="cart.php?excluir=<?php echo $posicao;?>">
-                                                        <i class="flaticon-delete"></i>
-                                                    </a>
-                                                </td>
-                                                <td class="product-image">
-                                                    <a href="#">
-                                                        <img src="images/<?php echo $itemCarrinho->getLivro()->getCapaImagem();?>" alt="" width="104" height="104">
-                                                    </a>
-                                                </td>
-                                                <td class="t-product-name">
-                                                    <h3>
-                                                        <a href="#"><?php echo $itemCarrinho->getLivro()->getTitulo();?></a>
-                                                    </h3>
-                                                </td>
-                                                <td class="product-unit-price">
-                                                    <p>R$ <?php echo $itemCarrinho->getLivro()->getValor();?></p>
-                                                </td>
-                                                <td class="product-quantity product-cart-details">
-                                                    <input type="number" min="1" name="qtd<?php echo $posicao;?>" value="<?php echo $itemCarrinho->getQuantidade();?>">
-                                                </td>
-                                                <td class="product-quantity">
-                                                    <p>R$ <?php echo $itemCarrinho->getQuantidade() * $itemCarrinho->getLivro()->getValor();?></p>
-                                                </td>
-                                            </tr>
-                                            <?php
-                                            $total += $itemCarrinho->getQuantidade() * $itemCarrinho->getLivro()->getValor();
-                                            $posicao++;
-                                        }
-                                        ?>
-                                        </tbody>
-                                    </table>
+		<!-- About Us Area Start -->
+        <div class="about-us-area section-padding">
+            <div class="container">
+                <div class="row">
+                    <?php
+                        if ($venda->getId() > 0){
+                            echo "<h2>Venda finalizada com sucesso<br><br> Código da venda:<strong> ".$venda->getId()."</strong></h2>";
+                        }
+                    ?>
+                </div>
+            </div>
+        </div>
+		<!--<div class="about-us-area section-padding">
+		    <div class="container">
+                <div class="row">
+                    <div class="about-top-inner">
+                        <div class="col-md-6">
+                            <div class="about-inner">
+                                <div class="about-title">
+                                    <h2>Our Story</h2>
                                 </div>
-                                <div class="shopingcart-bottom-area">
-                                    <a class="left-shoping-cart" href="shop.php">CONTINUE COMPRANDO</a>
-                                    <div class="shopingcart-bottom-area pull-right">
-                                        <a class="right-shoping-cart" href="#">CLEAR SHOPPING CART</a>
-                                        <!--<button type="submit" name="atualizar" class="right-shoping-cart">ATUALIZAR CARRINHO</button>-->
-                                        <a class="right-shoping-cart" href="#" onClick="document.getElementById('formcarrinho').submit();">ATUALIZAR CARRINHO</a>
-                                    </div>
+                                <div class="about-content">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elitss ed do eiusmod tempor incididunt ut labore et dolore mag na aliqua. Utes enim ad minim veniam, quis nostrud exerck itation ullam co laboris nisi ut aliquip ex ea commodo coes nsequat. Duis aute irure dolor in reprehenderit in.</p>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elitss ed do eiusmod tempor incididunt ut labore et dolore mag na aliqua. Utes enim ad minimLorem ipsum dolor sit amet, consectetur adipisicing elitss ed do eiusmod tempor incididunt ut labore et dolore mag na aliqua. Utes enim ad minim veniam, quis nostrud exerck itation ullam co laboris nisi ut aliquip ex ea commodo coes nsequat. Duis aute irure dolor in reprehenderit in. </p>
                                 </div>
-                                </form>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="about-image">
+                                <img src="img/about/1.jpg" alt="">
                             </div>
                         </div>
                     </div>
-                </div>
-                <!-- Cart Area End -->
-                <!-- Discount Area Start -->
-                <div class="discount-area">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-6 col-sm-6">
-                                <!--<div class="discount-main-area">
-                                    <div class="discount-top">
-                                        <h3>DISCOUNT CODE</h3>
-                                        <p>Enter your coupon code if have one</p>
-                                    </div>
-                                    <div class="discount-middle">
-                                        <input type="text" placeholder="">
-                                        <a class="" href="#">APPLY COUPON</a>
-                                    </div>
-                                </div>-->
+                    <div class="about-bottom-inner">
+                        <div class="col-md-6">
+                            <div class="about-image">
+                                <img src="img/about/2.jpg" alt="">
                             </div>
-                            <div class="col-md-6 col-sm-6">
-                                <div class="subtotal-main-area">
-                                    <!--<div class="subtotal-area">
-                                        <h2>SUBTOTAL<span>$ 200</span></h2>
-                                    </div>-->
-                                    <div class="subtotal-area">
-                                        <h2>GRAND TOTAL<span>R$ <?php echo $total;?></span></h2>
-                                    </div>
-                                    <a href="checkout.php">CHECKOUT</a>
-                                    <p>Checkout With Multiple Addresses</p>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="about-inner">
+                                <div class="about-title">
+                                    <h2>Mission and Vission</h2>
+                                </div>
+                                <div class="about-content">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elitss ed do eiusmod tempor incididunt ut labore et dolore mag na aliqua. Utes enim ad minim veniam, quis nostrud exerck itation ullam co laboris nisi ut aliquip ex ea commodo coes nsequat. Duis aute irure dolor in reprehenderit in.</p>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elitss ed do eiusmod tempor incididunt ut labore et dolore mag na aliqua. Utes enim ad minimLorem ipsum dolor sit amet, consectetur adipisicing elitss ed do eiusmod tempor incididunt ut labore et dolore mag na aliqua. </p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <?php
-            }
-        ?>
-        <!-- Discount Area End -->	
+		    </div>
+		</div>-->
+		<!-- About Us Area End -->
+		<!-- Our Team Area Start -->
+		<!--<div class="our-team-area">
+		    <h2 class="section-title">OUR WRITER</h2>
+		    <div class="container">
+		        <div class="row">
+		        <div class="team-list indicator-style">
+		            <div class="col-md-3">
+		                <div class="single-team-member">
+		                    <a href="#">
+		                        <img src="img/about/team/1.jpg" alt="">
+		                    </a>
+		                    <div class="member-info">
+		                        <a href="#">rokan tech</a>
+		                        <p>WRITER</p>
+		                    </div>
+		                </div>
+		            </div>
+		            <div class="col-md-3">
+		                <div class="single-team-member">
+		                    <a href="#">
+		                        <img src="img/about/team/2.jpg" alt="">
+		                    </a>
+		                    <div class="member-info">
+		                        <a href="#">mirinda</a>
+		                        <p>AUTHOR</p>
+		                    </div>
+		                </div>
+		            </div>
+		            <div class="col-md-3">
+		                <div class="single-team-member">
+		                    <a href="#">
+		                        <img src="img/about/team/3.jpg" alt="">
+		                    </a>
+		                    <div class="member-info">
+		                        <a href="#">jone doe</a>
+		                        <p>WRITER</p>
+		                    </div>
+		                </div>
+		            </div>
+		            <div class="col-md-3">
+		                <div class="single-team-member">
+		                    <a href="#">
+		                        <img src="img/about/team/4.jpg" alt="">
+		                    </a>
+		                    <div class="member-info">
+		                        <a href="#">nick kon</a>
+		                        <p>WRITER</p>
+		                    </div>
+		                </div>
+		            </div>
+		            <div class="col-md-3">
+		                <div class="single-team-member">
+		                    <a href="#">
+		                        <img src="img/about/team/2.jpg" alt="">
+		                    </a>
+		                    <div class="member-info">
+		                        <a href="#">mirinda</a>
+		                        <p>AUTHOR</p>
+		                    </div>
+		                </div>
+		            </div>
+		            <div class="col-md-3">
+		                <div class="single-team-member">
+		                    <a href="#">
+		                        <img src="img/about/team/1.jpg" alt="">
+		                    </a>
+		                    <div class="member-info">
+		                        <a href="#">rokan tech</a>
+		                        <p>WRITER</p>
+		                    </div>
+		                </div>
+		            </div>
+		        </div>
+		        </div>
+		    </div>
+		</div>-->
+		<!-- Our Team Area End -->
 		<!-- Footer Area Start -->
 		<footer>
 		    <div class="footer-top-area">
@@ -460,7 +498,7 @@ if (isset($_POST['qtd0'])){
 		                        <ul class="footer-list">
 		                            <li><a href="my-account.html">My Account</a></li>
 		                            <li><a href="account.html">Login</a></li>
-		                            <li><a href="cart.php">My Cart</a></li>
+		                            <li><a href="cart.html">My Cart</a></li>
 		                            <li><a href="wishlist.html">Wishlist</a></li>
 		                            <li><a href="checkout.html">Checkout</a></li>
 		                        </ul>

@@ -1,11 +1,13 @@
 <?php
 require_once "Cliente.php";
+require_once "Situacao.php";
 
 class Venda
 {
     private $id;
     private $cliente;
     private $dataVenda;
+    private $situacao;
 
     /**
      * Venda constructor.
@@ -14,6 +16,7 @@ class Venda
     public function __construct()
     {
         $this->cliente = new Cliente();
+        $this->situacao = new Situacao();
     }
 
 
@@ -64,6 +67,23 @@ class Venda
     {
         $this->dataVenda = $dataVenda;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getSituacao()
+    {
+        return $this->situacao;
+    }
+
+    /**
+     * @param mixed $situacao
+     */
+    public function setSituacao($situacao)
+    {
+        $this->situacao = $situacao;
+    }
+
 
 
 }
